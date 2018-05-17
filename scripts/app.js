@@ -11,9 +11,16 @@ function handleSubmit(e){
   e.preventDefault();
   var diasTrabajo = e.target.diasdetrabajo.value;
   var horasDia = e.target.horasaldia.value;
-  var horasTrabajo = diasTrabajo * horasDia;
+  var horasTrabajo = diasTrabajo * horasDia * 52;
   var horasdenotrabajar = diaslibres * horasdia + diasdeinactividad * horasdias;
   var tiempoadministrativo = porcentajedejuntas * (horastrabajo - horasdeinactividad);
+  var gastos = gastosmensuales * 12;
+  var precioextr = horasdeinactividad + tiempoadministrativo + gastosfijos;
+  var horasefectivas = (horasposibles - horasdeinactividad - tiempoadministrativo) * horasdia;
+  var horas = horasdia + (horadia * rentabilidad) + (horasdia * jubilacion);
+  
+  
+  
 
 }
 
